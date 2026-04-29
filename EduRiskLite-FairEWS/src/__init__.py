@@ -1,0 +1,1 @@
+"""EduRiskLite-FairEWS source package."""
