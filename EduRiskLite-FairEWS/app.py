@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+import os
 import pandas as pd
+from pathlib import Path
+import subprocess
 import streamlit as st
+import sys
 
 from src.config import MODEL_PATH, SCORED_STUDENTS_PATH
 from src.data_utils import format_feature_name, load_dataset
@@ -20,6 +24,34 @@ ROW_PREVIEW_FIELDS = [
     "curricular_units_1st_sem_approved",
     "curricular_units_2nd_sem_approved",
 ]
+
+
+def running_under_streamlit() -> bool:
+    """Detect whether the script is already executing inside a Streamlit session."""
+    try:
+        from streamlit.runtime.scriptrunner import get_script_run_ctx
+    except ImportError:
+        return False
+
+    return get_script_run_ctx() is not None
+
+
+def relaunch_with_streamlit() -> None:
+    """Re-run the file with Streamlit so VS Code's Run button opens the dashboard correctly."""
+    launch_environment = os.environ.copy()
+    launch_environment["STREAMLIT_SERVER_SHOW_EMAIL_PROMPT"] = "false"
+    launch_environment["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
+
+    launch_command = [
+        sys.executable,
+        "-m",
+        "streamlit",
+        "run",
+        str(Path(__file__).resolve()),
+        "--server.headless=false",
+        "--browser.gatherUsageStats=false",
+    ]
+    raise SystemExit(subprocess.run(launch_command, check=False, env=launch_environment).returncode)
 
 
 def load_dashboard_assets() -> tuple[dict[str, object], pd.DataFrame, pd.DataFrame]:
@@ -252,9 +284,12 @@ def main() -> None:
             st.dataframe(
                 build_student_row_preview(selected_student_row),
                 hide_index=True,
-                use_container_width=True,
+                width="stretch",
             )
 
 
 if __name__ == "__main__":
+    # VS Code often starts Python files directly. Relaunch through Streamlit so the app opens in a browser.
+    if not running_under_streamlit() and os.environ.get("EDURISKLITE_SKIP_STREAMLIT_RELAUNCH") != "1":
+        relaunch_with_streamlit()
     main()
