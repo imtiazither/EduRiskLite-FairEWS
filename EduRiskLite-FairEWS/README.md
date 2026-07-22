@@ -129,7 +129,7 @@ Suggested placement:
 - Save screenshots in `docs/screenshots/`
 - Reference them from this README after exporting images from the running dashboard
 
-Example Markdown once screenshots are available:
+Example Markdown once screenshots are available: Copy and Paste these links to your browser.
 
 ```markdown
 ![Dashboard Overview](docs/screenshots/dashboard-overview.png)
