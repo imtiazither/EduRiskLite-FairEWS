@@ -293,3 +293,4 @@ if __name__ == "__main__":
     if not running_under_streamlit() and os.environ.get("EDURISKLITE_SKIP_STREAMLIT_RELAUNCH") != "1":
         relaunch_with_streamlit()
     main()
+
