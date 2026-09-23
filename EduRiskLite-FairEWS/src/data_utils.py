@@ -77,3 +77,4 @@ def split_features_target(dataset: pd.DataFrame) -> tuple[pd.DataFrame, pd.Serie
     target = (dataset[TARGET_COLUMN] == POSITIVE_CLASS).astype(int)
     return features, target, feature_columns
 
+
