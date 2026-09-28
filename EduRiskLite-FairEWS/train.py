@@ -72,6 +72,7 @@ def main() -> None:
     fairness_report.to_csv(FAIRNESS_REPORT_PATH, index=False)
     create_false_negative_rate_chart(fairness_report, FAIRNESS_CHART_PATH)
 
+    
     print(f"Saved trained model to: {MODEL_PATH}")
     print(f"Saved model report to: {MODEL_REPORT_PATH}")
     print(f"Saved fairness report to: {FAIRNESS_REPORT_PATH}")
