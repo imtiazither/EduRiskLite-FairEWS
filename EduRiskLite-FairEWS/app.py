@@ -288,7 +288,6 @@ def main() -> None:
             )
 
 
-
 if __name__ == "__main__":
     # VS Code often starts Python files directly. Relaunch through Streamlit so the app opens in a browser.
     if not running_under_streamlit() and os.environ.get("EDURISKLITE_SKIP_STREAMLIT_RELAUNCH") != "1":
