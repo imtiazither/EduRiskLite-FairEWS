@@ -13,7 +13,6 @@ from src.config import MODEL_PATH, SCORED_STUDENTS_PATH
 from src.data_utils import format_feature_name, load_dataset
 from src.modeling import explain_student_prediction, load_model_bundle, score_students
 
-
 TOP_FEATURE_COUNT = 3
 ROW_PREVIEW_FIELDS = [
     "age_at_enrollment",
