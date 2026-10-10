@@ -55,7 +55,6 @@ NUMERIC_FEATURES = [
     "gdp",
 ]
 
-
 # Available subgroup variables used by the fairness module.
 SUBGROUP_COLUMNS = [
     "gender",
