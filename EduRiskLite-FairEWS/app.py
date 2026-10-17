@@ -23,7 +23,6 @@ ROW_PREVIEW_FIELDS = [
     "curricular_units_2nd_sem_approved",
 ]
 
-
 def running_under_streamlit() -> bool:
     """Detect whether the script is already executing inside a Streamlit session."""
     try:
