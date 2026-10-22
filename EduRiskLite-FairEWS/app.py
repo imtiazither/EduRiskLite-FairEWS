@@ -64,7 +64,6 @@ def load_dashboard_assets() -> tuple[dict[str, object], pd.DataFrame, pd.DataFra
 
     return model_bundle, processed_students, scored_students
 
-
 def inject_styles() -> None:
     """Apply a lightweight visual treatment for a cleaner presentation."""
     st.markdown(
