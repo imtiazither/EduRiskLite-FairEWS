@@ -31,7 +31,6 @@ def running_under_streamlit() -> bool:
 
     return get_script_run_ctx() is not None
 
-
 def relaunch_with_streamlit() -> None:
     """Re-run the file with Streamlit so VS Code's Run button opens the dashboard correctly."""
     launch_environment = os.environ.copy()
