@@ -77,7 +77,6 @@ def evaluate_fairness(
 
     return pd.DataFrame(fairness_rows)
 
-
 def create_false_negative_rate_chart(
     fairness_report: pd.DataFrame,
     output_path: Path | str,
