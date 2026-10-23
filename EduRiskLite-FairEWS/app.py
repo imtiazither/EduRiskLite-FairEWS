@@ -134,7 +134,6 @@ def get_predicted_outcome(predicted_flag: int) -> str:
     """Map the binary model output into a portfolio-friendly outcome label."""
     return "Dropout" if int(predicted_flag) == 1 else "Graduate / Enrolled"
 
-
 def render_support_action(risk_level: str, support_action: str) -> None:
     """Display the support suggestion with a severity that matches the risk level."""
     if risk_level == "High":
