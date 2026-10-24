@@ -48,7 +48,6 @@ def relaunch_with_streamlit() -> None:
     ]
     raise SystemExit(subprocess.run(launch_command, check=False, env=launch_environment).returncode)
 
-
 def load_dashboard_assets() -> tuple[dict[str, object], pd.DataFrame, pd.DataFrame]:
     """Load the trained model and a sample processed student dataset for the dashboard."""
     model_bundle = load_model_bundle(MODEL_PATH)
