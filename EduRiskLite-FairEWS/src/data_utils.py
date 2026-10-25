@@ -10,7 +10,6 @@ import pandas as pd
 
 from src.config import DATA_PATH_CANDIDATES, POSITIVE_CLASS, TARGET_COLUMN
 
-
 def resolve_data_path(data_path: Path | None = None) -> Path:
     """Return the first available dataset path."""
     if data_path is not None:
