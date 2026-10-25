@@ -163,7 +163,6 @@ def render_feature_cards(explanation: pd.DataFrame) -> None:
                 unsafe_allow_html=True,
             )
 
-
 def build_student_row_preview(selected_student_row: pd.DataFrame) -> pd.DataFrame:
     """Prepare a compact preview of the selected sample row."""
     preview_fields = [
