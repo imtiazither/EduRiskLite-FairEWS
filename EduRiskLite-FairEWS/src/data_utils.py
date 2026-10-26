@@ -24,7 +24,6 @@ def resolve_data_path(data_path: Path | None = None) -> Path:
         + ", ".join(str(path) for path in DATA_PATH_CANDIDATES)
     )
 
-
 def clean_column_name(column_name: str) -> str:
     """Convert raw dataset headers into predictable snake_case names."""
     cleaned = column_name.replace("\ufeff", "").replace("'", "").strip().lower()
