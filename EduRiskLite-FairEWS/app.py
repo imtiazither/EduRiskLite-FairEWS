@@ -141,7 +141,6 @@ def render_support_action(risk_level: str, support_action: str) -> None:
     else:
         st.success(support_action)
 
-
 def render_feature_cards(explanation: pd.DataFrame) -> None:
     """Show the top local drivers behind the selected prediction."""
     feature_columns = st.columns(TOP_FEATURE_COUNT)
