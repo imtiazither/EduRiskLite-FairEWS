@@ -127,7 +127,6 @@ def inject_styles() -> None:
         unsafe_allow_html=True,
     )
 
-
 def get_predicted_outcome(predicted_flag: int) -> str:
     """Map the binary model output into a portfolio-friendly outcome label."""
     return "Dropout" if int(predicted_flag) == 1 else "Graduate / Enrolled"
