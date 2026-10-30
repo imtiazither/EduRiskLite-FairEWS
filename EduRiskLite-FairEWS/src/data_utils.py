@@ -63,7 +63,6 @@ def load_dataset(data_path: Path | None = None) -> pd.DataFrame:
 
     return dataset
 
-
 def split_features_target(dataset: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, list[str]]:
     """Return the feature matrix, binary target, and feature column names."""
     feature_columns = [
