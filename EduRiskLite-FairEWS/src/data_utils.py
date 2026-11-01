@@ -32,7 +32,6 @@ def clean_column_name(column_name: str) -> str:
     cleaned = re.sub(r"_+", "_", cleaned)
     return cleaned.strip("_")
 
-
 def format_feature_name(column_name: str) -> str:
     """Turn a snake_case feature name into a more readable label."""
     words = column_name.replace("_", " ").split()
