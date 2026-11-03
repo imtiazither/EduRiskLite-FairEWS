@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 from src.config import SUBGROUP_COLUMNS
 from src.modeling import compute_classification_metrics
 
-
 def evaluate_fairness(
     y_true: pd.Series,
     y_pred: np.ndarray,
