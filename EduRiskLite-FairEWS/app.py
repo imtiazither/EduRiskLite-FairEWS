@@ -171,7 +171,6 @@ def build_student_row_preview(selected_student_row: pd.DataFrame) -> pd.DataFram
     preview_frame["feature"] = preview_frame["feature"].apply(format_feature_name)
     return preview_frame
 
-
 def main() -> None:
     """Render the educator-facing decision-support dashboard."""
     st.set_page_config(page_title="EduRiskLite-FairEWS", page_icon="🎓", layout="wide")
