@@ -32,6 +32,7 @@ def clean_column_name(column_name: str) -> str:
     cleaned = re.sub(r"_+", "_", cleaned)
     return cleaned.strip("_")
 
+
 def format_feature_name(column_name: str) -> str:
     """Turn a snake_case feature name into a more readable label."""
     words = column_name.replace("_", " ").split()
@@ -45,7 +46,6 @@ def format_feature_name(column_name: str) -> str:
     readable_name = " ".join(formatted_words)
     readable_name = readable_name.replace("1St", "1st").replace("2Nd", "2nd")
     return readable_name
-
 
 def load_dataset(data_path: Path | None = None) -> pd.DataFrame:
     """Load the dataset and attach a synthetic record identifier."""
