@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH_CANDIDATES = [
     PROJECT_ROOT / "data.csv",
