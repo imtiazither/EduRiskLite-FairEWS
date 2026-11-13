@@ -116,7 +116,6 @@ def create_false_negative_rate_chart(
             fontsize=9,
             color="#243b53",
         )
-
     axis.grid(axis="x", linestyle="--", alpha=0.3)
     figure.tight_layout()
     figure.savefig(output_path, dpi=200, bbox_inches="tight")
