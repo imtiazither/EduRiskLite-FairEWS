@@ -32,7 +32,6 @@ from src.config import (
 )
 from src.data_utils import format_feature_name
 
-
 def build_baseline_pipeline(feature_frame: pd.DataFrame) -> tuple[Pipeline, list[str], list[str]]:
     """Create a simple preprocessing + logistic regression pipeline."""
     numeric_features = [feature_name for feature_name in NUMERIC_FEATURES if feature_name in feature_frame.columns]
