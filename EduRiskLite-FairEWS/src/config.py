@@ -25,6 +25,7 @@ MEDIUM_RISK_THRESHOLD = 0.33
 HIGH_RISK_THRESHOLD = 0.66
 TOP_FACTOR_COUNT = 5
 
+
 RISK_ACTIONS = {
     "Low": "Continue routine monitoring and reinforce the student's current supports.",
     "Medium": "Schedule a check-in within two weeks and review attendance, coursework, and advising needs.",
