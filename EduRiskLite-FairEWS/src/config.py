@@ -16,6 +16,7 @@ FAIRNESS_REPORT_PATH = OUTPUTS_DIR / "fairness_report.csv"
 FAIRNESS_CHART_PATH = OUTPUTS_DIR / "fairness_false_negative_rate.png"
 SCORED_STUDENTS_PATH = OUTPUTS_DIR / "scored_students.csv"
 
+
 TARGET_COLUMN = "target"
 POSITIVE_CLASS = "Dropout"
 RANDOM_STATE = 42
