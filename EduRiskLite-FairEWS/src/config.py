@@ -10,6 +10,7 @@ DATA_PATH_CANDIDATES = [
 MODELS_DIR = PROJECT_ROOT / "models"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 
+
 MODEL_PATH = MODELS_DIR / "edurisklite_fairews_model.joblib"
 MODEL_REPORT_PATH = OUTPUTS_DIR / "model_report.csv"
 FAIRNESS_REPORT_PATH = OUTPUTS_DIR / "fairness_report.csv"
