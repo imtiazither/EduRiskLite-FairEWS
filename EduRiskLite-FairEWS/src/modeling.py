@@ -61,7 +61,6 @@ def build_baseline_pipeline(feature_frame: pd.DataFrame) -> tuple[Pipeline, list
 
     return pipeline, numeric_features, categorical_features
 
-
 def compute_classification_metrics(
     y_true: pd.Series | np.ndarray,
     y_pred: np.ndarray,
