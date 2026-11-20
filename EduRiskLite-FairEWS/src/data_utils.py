@@ -53,7 +53,6 @@ def load_dataset(data_path: Path | None = None) -> pd.DataFrame:
     dataset.columns = [clean_column_name(column_name) for column_name in dataset.columns]
     dataset = dataset.dropna(how="all").reset_index(drop=True)
 
-    
     if TARGET_COLUMN not in dataset.columns:
         raise ValueError(f"Expected a '{TARGET_COLUMN}' column in {csv_path}.")
 
